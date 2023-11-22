@@ -1,0 +1,34 @@
+{% extends "plantilla/master.html" %}
+
+{% load static %}
+
+{% block contenido %}
+<div class="page-width-1 page-left">
+    
+    <h1><a href="create_carrera" class="btn btn-primary tm-intro-btn tm-page-link" >CREAR NUEVA CARRERA</a></h1>
+      <h1>Lista de carreras</h1>
+      <h2>{{ carreras }}</h2>
+      
+      <table class="table table-dark" >
+        <tr>
+            <td>ID</td>
+            <td>Nombre</td>
+            <td>Status</td>
+        </tr>
+        {% for carrera in carreras %}
+        <tr>
+            <td>{{ carrera.id }}</td>
+            <td>{{ carrera.nombre }}</td>
+            <td>{{ carrera.status }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <h2><a href="index" >Regresar al Index</a></h2>
+
+    </div>
+  
+    
+    
+
+
+{% endblock %}

@@ -1,0 +1,44 @@
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primer proyecto en DJANGO</title>
+</head>
+<body>
+    <h1>Primer proyecto en DJANGO</h1>
+    <ol>
+        <li><a href="carreras" >Ver carreras</a></li>
+        <li><a href="alumnos" >Ver alumnos</a></li>
+    </ol>
+</body>
+</html>
+-->
+
+{% extends "plantilla/master.html" %}
+
+{% load static %}
+
+{% block contenido %}
+
+<div class="page-width-1 page-left">
+    <div class="d-flex position-relative tm-border-top tm-border-bottom intro-container">
+      <div class="intro-left tm-bg-dark">
+        <h2 class="mb-4">Cómputo en la nube</h2>
+        <p class="mb-4">
+          Ejemplo de una app creada con DJANGO </p>
+      </div>
+      <div class="intro-right">
+        <img src="{% static 'img/home-img-1.jpg' %}" alt="Image" class="img-fluid intro-img-1">
+        <img src="{% static 'img/home-img-2.jpg' %}" alt="Image" class="img-fluid intro-img-2">
+      </div>
+    </div>
+    <div class="text-center">
+        <a href="https://www.djangoproject.com/" target="_blank" data-page-no="2" class="btn btn-primary tm-intro-btn tm-page-link">
+            DJANGO
+          </a>
+    </div>            
+  </div> 
+
+{% endblock %}
